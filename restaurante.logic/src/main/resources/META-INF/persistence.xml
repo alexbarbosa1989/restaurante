@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="restaurante.logic">
+		<class>co.restaurante.entities.Usuario</class>
+		<class>co.restaurante.entities.Mesa</class>
+		<class>co.restaurante.entities.Reserva</class>
+	</persistence-unit>
+</persistence>
