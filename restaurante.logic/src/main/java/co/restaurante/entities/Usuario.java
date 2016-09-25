@@ -8,7 +8,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name = "T_USUARIO", schema="SYSTEM")
+@Table(name = "T_USUARIO")
 public class Usuario implements Serializable {
 
 	

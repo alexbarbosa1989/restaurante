@@ -9,11 +9,15 @@
 		<class>co.restaurante.entities.Mesa</class>
 		<class>co.restaurante.entities.Reserva</class>
 		<properties>
-			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@192.168.99.100:32772:xe" />
-			<property name="javax.persistence.jdbc.user" value="SYSTEM" />
-			<property name="javax.persistence.jdbc.password" value="oracle" />
+			<property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver" />
+			<property name="hibernate.connection.url" value="jdbc:oracle:thin:@192.168.99.100:32772:xe" />
+			<property name="hibernate.connection.username" value="SYSTEM" />
+			<property name="hibernate.connection.password" value="oracle" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.order_inserts" value="true"/>
+			<property name="hibernate.jdbc.batch_size" value="100"/>
+			<property name="org.hibernate.flushmode" value="COMMIT"/>
 		</properties>
 	</persistence-unit>
 
