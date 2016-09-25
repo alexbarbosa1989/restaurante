@@ -6,5 +6,4 @@ import co.restaurante.entities.Usuario;
 
 @Stateless
 public class UsuarioDao extends GenericDao<Usuario>{
-
 }

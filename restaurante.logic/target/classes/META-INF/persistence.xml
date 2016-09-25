@@ -5,4 +5,16 @@
 		<class>co.restaurante.entities.Mesa</class>
 		<class>co.restaurante.entities.Reserva</class>
 	</persistence-unit>
+	
+	<persistence-unit name="miUnidad" transaction-type="JTA">   
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@192.168.99.100:32769:xe" />
+            <property name="javax.persistence.jdbc.user" value="system" />
+            <property name="javax.persistence.jdbc.password" value="oracle" />
+        </properties>
+    </persistence-unit>
+    
+    
 </persistence>
