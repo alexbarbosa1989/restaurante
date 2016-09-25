@@ -5,5 +5,5 @@ import javax.ejb.Stateless;
 import co.restaurante.entities.Usuario;
 
 @Stateless
-public class UsuarioDao extends GenericDao<Usuario>{
+public class UsuarioDao extends GenericDao<Usuario> implements IUsuarioDao{
 }

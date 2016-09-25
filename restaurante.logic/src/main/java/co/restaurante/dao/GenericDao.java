@@ -1,5 +1,6 @@
 package co.restaurante.dao;
 
+import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -10,7 +11,8 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 @Stateless
-public class GenericDao<T> {
+public class GenericDao<T> implements IGenericDaoLocal<T>{
+	
 
 	@PersistenceContext(unitName = "restauranteLogic")
 	protected EntityManager em;
@@ -49,4 +51,5 @@ public class GenericDao<T> {
 		Query query = em.createQuery("SELECT e FROM " + persistenceClass.getSimpleName() + " e ORDER BY e.id DESC");
 	    return (List<T>) query.getResultList();
 	}
+
 }

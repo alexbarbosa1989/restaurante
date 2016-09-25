@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<persistence-unit name="restauranteLogic" transaction-type="JTA">   
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="restauranteLogic"
+		transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>co.restaurante.entities.Usuario</class>
 		<class>co.restaurante.entities.Mesa</class>
 		<class>co.restaurante.entities.Reserva</class>
-        <properties>
-            <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@192.168.99.100:32769:xe" />
-            <property name="javax.persistence.jdbc.user" value="system" />
-            <property name="javax.persistence.jdbc.password" value="oracle" />
-        </properties>
-    </persistence-unit>
-    
-    
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@192.168.99.100:32772:xe" />
+			<property name="javax.persistence.jdbc.user" value="SYSTEM" />
+			<property name="javax.persistence.jdbc.password" value="oracle" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+		</properties>
+	</persistence-unit>
+
 </persistence>

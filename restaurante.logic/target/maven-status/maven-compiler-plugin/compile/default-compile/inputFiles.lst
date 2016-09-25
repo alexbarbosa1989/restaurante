@@ -1,10 +1,14 @@
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/ejb/MesaLogic.java
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/entities/Usuario.java
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/interfaces/IReservaLogic.java
+/Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/dao/IUsuarioDao.java
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/ejb/UsuarioLogic.java
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/dao/ReservaDao.java
+/Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/dao/IMesaDao.java
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/interfaces/IUsuarioLogic.java
+/Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/dao/IGenericDaoLocal.java
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/dao/GenericDao.java
+/Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/dao/IReservaDao.java
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/entities/Mesa.java
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/ejb/ReservaLogic.java
 /Users/alexanderbarbosaayala/Documents/workspace/restaurante/restaurante.logic/src/main/java/co/restaurante/entities/Reserva.java
