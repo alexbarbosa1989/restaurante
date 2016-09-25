@@ -1,5 +1,7 @@
 package co.restaurante.interfaces;
 
+import java.util.List;
+
 import javax.ejb.Local;
 
 import co.restaurante.entities.Mesa;
@@ -7,6 +9,8 @@ import co.restaurante.entities.Mesa;
 @Local
 public interface IMesaLogic{
 
-	public void registroMesa(Mesa m);
+	public String registroMesa(Mesa m);
+	
+	public List<Mesa> consultarMesas();
 	
 }

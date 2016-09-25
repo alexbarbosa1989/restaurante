@@ -11,7 +11,7 @@ import co.restaurante.entities.Usuario;
 @Local
 public interface IUsuarioLogic {
 
-	public void registroUsuario(Usuario u);
+	public String registroUsuario(Usuario u);
 	
 	public List<Usuario> consultarUsr();
 	

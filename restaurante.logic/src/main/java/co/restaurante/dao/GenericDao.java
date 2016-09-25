@@ -1,6 +1,5 @@
 package co.restaurante.dao;
 
-import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -28,6 +27,7 @@ public class GenericDao<T> implements IGenericDaoLocal<T>{
 
 	public void create(T p) {
 		em.persist(p);
+		em.flush();
 	}
 
 
@@ -42,7 +42,8 @@ public class GenericDao<T> implements IGenericDaoLocal<T>{
 	
 
 	public T findById(Object p) {
-        Class<T> claseEntidad = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+        @SuppressWarnings("unchecked")
+		Class<T> claseEntidad = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 		return em.find(claseEntidad, p);
 	}
 

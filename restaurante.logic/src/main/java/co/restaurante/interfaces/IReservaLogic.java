@@ -9,9 +9,9 @@ import co.restaurante.entities.Reserva;
 @Local
 public interface IReservaLogic {
 
-	public void crearReserva(Reserva r);
+	public String crearReserva(Reserva r);
 	
-	public void cancelarReserva(Reserva r);
+	public String cancelarReserva(Reserva r);
 	
 	public List<Reserva> consultarReservas();
 	

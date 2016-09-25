@@ -4,33 +4,50 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 
-import co.restaurante.dao.ReservaDao;
+import co.restaurante.dao.IReservaDao;
 import co.restaurante.entities.Reserva;
 import co.restaurante.interfaces.IReservaLogic;
 
 @Stateless
 public class ReservaLogic implements IReservaLogic{
-
-	public void crearReserva(Reserva r){
-		ReservaDao dao = new ReservaDao();
-		dao.create(r);
-	};
 	
-	public void cancelarReserva(Reserva r){
-		ReservaDao dao = new ReservaDao();
-		dao.edit(r);
+	@Inject
+	private IReservaDao dao;
+	
+	public String crearReserva(Reserva r){
+		String resultado = new String();
+		try{
+			dao.create(r);
+			resultado = "OK. Creacion exitosa";
+		}catch (Exception e){
+			resultado = "ERROR. en creacion";
+
+		}
+		return resultado;
+	};
+
+	
+	public String cancelarReserva(Reserva r){
+		String resultado = new String();
+		try{
+			dao.edit(r);
+			resultado = "OK. Creacion exitosa";
+		}catch (Exception e){
+			resultado = "ERROR. en creacion";
+
+		}
+		return resultado;
 	};
 	
 	public List<Reserva> consultarReservas(){
-		ReservaDao dao = new ReservaDao();
 		List<Reserva> l = new ArrayList<Reserva>();
 		l = dao.findAll();
 		return l;
 	};
 	
 	public Reserva consultarReserva(Long idReserva){
-		ReservaDao dao = new ReservaDao();
 		Reserva r = new Reserva();
 		dao.findById(idReserva);
 		return r;

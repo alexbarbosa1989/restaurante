@@ -7,7 +7,6 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 import co.restaurante.dao.IUsuarioDao;
-import co.restaurante.dao.UsuarioDao;
 import co.restaurante.entities.Usuario;
 import co.restaurante.interfaces.IUsuarioLogic;
 
@@ -16,8 +15,16 @@ public class UsuarioLogic implements IUsuarioLogic{
 	@Inject
 	private IUsuarioDao dao;
 	
-	public void registroUsuario(Usuario u){
-		dao.create(u);
+	public String registroUsuario(Usuario u){
+		String resultado = new String();
+		try{
+			dao.create(u);
+			resultado = "OK. Creacion exitosa";
+		}catch (Exception e){
+			resultado = "ERROR. en creacion";
+
+		}
+		return resultado;
 	};
 	
 	public List<Usuario> consultarUsr(){

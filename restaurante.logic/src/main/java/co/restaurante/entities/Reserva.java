@@ -29,6 +29,9 @@ public class Reserva implements Serializable {
     @Column(name="fecha")
     private Date fecha;
 	
+    @Column(name="estado_reserva")
+    private String estReserva;
+    
 	public Reserva() {
 	}
 
@@ -63,6 +66,12 @@ public class Reserva implements Serializable {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-   
-	
+
+	public String getEstReserva() {
+		return estReserva;
+	}
+
+	public void setEstReserva(String estReserva) {
+		this.estReserva = estReserva;
+	}
 }
