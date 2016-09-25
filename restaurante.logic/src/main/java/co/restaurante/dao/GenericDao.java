@@ -12,7 +12,7 @@ import javax.persistence.Query;
 @Stateless
 public class GenericDao<T> {
 
-	@PersistenceContext(unitName = "miUnidad")
+	@PersistenceContext(unitName = "restauranteLogic")
 	protected EntityManager em;
 	private Class<T> persistenceClass;
 
@@ -23,22 +23,27 @@ public class GenericDao<T> {
 		persistenceClass = (Class) pt.getActualTypeArguments()[0];
 	}
 	
+
 	public void create(T p) {
 		em.persist(p);
 	}
+
 
 	public T edit(T p) {
 		return em.merge(p);
 	}
 
+
 	public void delete(T p) {
 		em.remove(em.merge(p));
 	}
+	
 
 	public T findById(Object p) {
         Class<T> claseEntidad = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 		return em.find(claseEntidad, p);
 	}
+
 
 	public List<T> findAll() {
 		Query query = em.createQuery("SELECT e FROM " + persistenceClass.getSimpleName() + " e ORDER BY e.id DESC");

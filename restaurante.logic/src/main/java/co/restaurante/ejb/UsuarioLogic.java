@@ -7,9 +7,10 @@ import javax.ejb.Stateless;
 
 import co.restaurante.dao.UsuarioDao;
 import co.restaurante.entities.Usuario;
+import co.restaurante.interfaces.IUsuarioLogic;
 
 @Stateless
-public class UsuarioLogic {
+public class UsuarioLogic implements IUsuarioLogic{
 
 	public void registroUsuario(Usuario u){
 		UsuarioDao dao = new UsuarioDao();

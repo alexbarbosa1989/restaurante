@@ -3,22 +3,30 @@ package co.restaurante.resource;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.EJB;
+import javax.inject.Inject;
+import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import org.json.JSONArray;
+//import org.json.JSONArray;
 
 import co.restaurante.ejb.UsuarioLogic;
 import co.restaurante.entities.Usuario;
+import co.restaurante.interfaces.IUsuarioLogic;
 
 @Path("/reservas")
 public class Reservas{
+	
+//	@EJB(lookup="java:/IUsuarioLogic")
+//	@EJB
+	@Inject
+	private IUsuarioLogic usuarioLogic;
 
-	@GET
+	@GET		
 	@Path("/crearUsuario")
 	@Produces(MediaType.APPLICATION_JSON)
 	public void crearUsuario(){
@@ -26,8 +34,9 @@ public class Reservas{
 		entity.setId(1L);
 		entity.setName("Nani");
 		entity.setRol(1L);
-		UsuarioLogic u = new UsuarioLogic();
-		u.registroUsuario(entity);
+		System.out.println("Se manda a guardar");
+		usuarioLogic.registroUsuario(entity);
+		System.out.println("Se guarda");
 	}
 	
 	@GET
@@ -35,12 +44,12 @@ public class Reservas{
 	@Produces(MediaType.APPLICATION_JSON)
 	public String consultarUsuario(){
 		List<Usuario> listaUsr = new ArrayList<Usuario>();
-		UsuarioLogic u = new UsuarioLogic();
-		listaUsr = u.consultarUsr();
-		JSONArray arrUsr = new JSONArray(listaUsr);
-		String arrResp = arrUsr.toString().replace("\\\\", "\\");
-		String arrResponse = arrResp.replace("\"null\"", "null");
-		return arrResponse;
+//		listaUsr = usuarioLogic.consultarUsr();
+//		JSONArray arrUsr = new JSONArray(listaUsr);
+//		String arrResp = arrUsr.toString().replace("\\\\", "\\");
+//		String arrResponse = arrResp.replace("\"null\"", "null");
+//		return arrResponse;
+		return "";
 	}
 
 	
