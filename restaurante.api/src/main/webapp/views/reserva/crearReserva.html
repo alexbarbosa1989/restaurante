@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Crear Reserva</title>
+</head>
+<body>
+<div>
+	<button id="volver">Volver</button> 
+	<h4>Creación de Reservas en Restaurante</h4>
+</div>
+<div>
+<form id="crearReservaForm">
+  Id Reserva:<br>
+  <input type="text" name="idReserva" id="idReserva"><br>
+  Id Cliente:<br>
+  <input type="text" name="idCliente" id="idCliente"><br>
+  Id Mesa:<br>
+  <input type="text" name="idMesa" id="idMesa"><br>
+  Fecha (AAAAMMDD):<br>
+  <input type="text" name="fecha" id="fecha"><br>
+  <br><button id="enviar">Enviar</button>
+</form>
+</div>
+	<script src="/restaurante.api/scripts/jquery-3.1.1.min.js"></script>
+	<script src="/restaurante.api/scripts/createResEvents.js"></script>
+</body>
+</html>

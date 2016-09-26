@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Consultar Reserva</title>
+<link id="style" href="/restaurante.api/styles/clean.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<div>
+	<button id="volver">Volver</button>
+	<h4>Consulta de Reservas en Restaurante</h4>
+</div>
+<div>
+  <input type="radio" name="opc" value="todos">Todas las reservas<br>
+  <input type="radio" name="opc"  value="uno">Una reserva<br>
+  	<div id="buscarUno" style="display: none;">
+  		Id Resesrva:<br>
+  		<input type="text" name=idReservaConsulta id="idReservaConsulta"><br>
+	</div>
+  <br><button id="enviar">Enviar</button>
+</div>
+
+<!-- llama al plugin par construir la tabla -->
+<div id="reservas"></div>
+
+	<script src="/restaurante.api/scripts/jquery-3.1.1.min.js"></script>
+	<script src="/restaurante.api/scripts/findResEvents.js"></script>
+	<script src="/restaurante.api/scripts/jquery.columns-1.0.min.js"></script>
+</body>
+</html>
